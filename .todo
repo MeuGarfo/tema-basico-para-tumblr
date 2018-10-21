@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<todo version="0.1.20">
+    <note priority="medium" time="1540092167">
+        ocultar as tags na home
+    </note>
+    <note priority="medium" time="1540092186">
+        ocultar os body do post na home
+    </note>
+    <note priority="medium" time="1540092196">
+        adicionar caixa de busca de posts
+    </note>
+</todo>
