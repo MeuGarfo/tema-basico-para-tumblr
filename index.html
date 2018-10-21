@@ -81,9 +81,7 @@
 
                 {block:Posts}
                 {block:Text}
-                {block:Title}
-                <h1><a href="{Permalink}">{Title}</a></h1>
-                {/block:Title}
+                
                 {block:IfShowTags}
                 {block:HasTags}
                 <div class="tags">
@@ -93,6 +91,12 @@
                 </div>
                 {/block:HasTags}
                 {/block:IfShowTags}
+
+
+                {block:Title}
+                <h1><a href="{Permalink}">{Title}</a></h1>
+                {/block:Title}
+
 
 
                 {block:Date}
