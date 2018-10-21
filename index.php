@@ -42,7 +42,10 @@
     }
     .conteudo iframe{
         display: block;
+        max-height:281px;
+        margin:0 auto;
         max-width: 100%;
+        width:500px;
     }
     .conteudo .data{
         color:gray;
