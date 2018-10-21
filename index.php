@@ -50,6 +50,12 @@
     .conteudo .data{
         color:gray;
     }
+    .conteudo p{
+        padding:0em 1em 0.25em 1em;
+    }
+    .conteudo .tags{
+        margin-bottom:1em;
+    }
     .conteudo .tags a{
         text-transform: capitalize;
     }
