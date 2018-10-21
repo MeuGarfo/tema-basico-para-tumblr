@@ -7,4 +7,4 @@
 - Reponsividade básica
 
 ## Documentacão
--[Como criar um tema HTML personalizado](https://www.tumblr.com/docs/br/custom_themes)
+- [Como criar um tema HTML personalizado](https://www.tumblr.com/docs/br/custom_themes)
