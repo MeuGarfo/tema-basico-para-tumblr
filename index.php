@@ -40,6 +40,9 @@
     .avatar{
         border-radius: 100%;
     }
+    .conteudo{
+        padding:1em;
+    }
     .conteudo iframe{
         display: block;
         max-height:281px;
@@ -47,17 +50,17 @@
         max-width: 100%;
         width:500px;
     }
-    .conteudo .data{
-        color:gray;
-    }
+    .conteudo .data,.conteudo .tags{
+        margin:1em 0;
+    }    
     .conteudo p{
-        padding:0em 1em 0.25em 1em;
-    }
-    .conteudo .tags{
-        margin-bottom:1em;
+        padding-bottom:0.25em;
     }
     .conteudo .tags a{
         text-transform: capitalize;
+    }
+    small{
+        color:gray;
     }
     /*Mobile*/
     @media all and (max-width: 799px) {
@@ -78,7 +81,7 @@
     <table width="100%" border="0">
         <tr>
             <td colspan="3" align="center">
-                <a href="/" title="Home">
+                <a href="/" title="AI">
                     <img class="avatar" alt="Anderson Ismael" src="{PortraitURL-128}" width="128" height="128">
                 </a><br>
                 {Description}
@@ -87,7 +90,8 @@
         <tr>
             <td width="25%">
             </td>
-            <td class="conteudo">
+            <td>
+                <div class="conteudo">
                 {block:Posts}
 
                 {block:Text}
@@ -96,7 +100,7 @@
                 {block:HasTags}
                 <div class="tags">
                     <small>
-                        <a href="/">Home</a>
+                        <a href="/">AI</a>
                         {block:Tags}
                         / <a href="{TagURL}" title="{lang:Posts tagged Tag}">{Tag}</a>&nbsp;
                         {/block:Tags}
@@ -128,7 +132,7 @@
                 {block:HasTags}
                 <div class="tags">
                     <small>
-                        <a href="/">Home</a>
+                        <a href="/">AI</a>
                         {block:Tags}
                         / <a href="{TagURL}" title="{lang:Posts tagged Tag}">{Tag}</a>&nbsp;
                         {/block:Tags}
@@ -163,7 +167,7 @@
                 {block:HasTags}
                 <div class="tags">
                     <small>
-                        <a href="/">Home</a>
+                        <a href="/">AI</a>
                         {block:Tags}
                         / <a href="{TagURL}" title="{lang:Posts tagged Tag}">{Tag}</a>&nbsp;
                         {/block:Tags}
@@ -171,6 +175,16 @@
                 </div>
                 {/block:HasTags}
                 {/block:IfShowTags}
+
+                {block:Date}
+                <div class="data">
+                    <small>
+                        {DayOfMonth} de {Month} de {Year}
+                    </small>
+                    <br>
+                </div>
+                {/block:Date}
+
                 {Video-500}
                 {block:Caption}<br>
                 {Caption}
@@ -244,7 +258,7 @@
             })();
             </script>
             {/block:IfDisqusShortname}
-
+        </div><!--conteudo-->
         </td>
         <td width="25%">
         </td>
