@@ -40,9 +40,15 @@
     .avatar{
         border-radius: 100%;
     }
+    .data{
+        color:gray;
+    }
+    .tags a{
+        text-transform: capitalize;
+    }
     /*Mobile*/
     @media all and (max-width: 799px) {
-        h1{
+        h1,.data,.tags{
             text-align:center;
         }
         td {
@@ -75,21 +81,27 @@
 
                 {block:Posts}
                 {block:Text}
-                {block:IfShowTags}
-                {block:HasTags}
-                {block:Tags}
-                <a href="{TagURL}" title="{lang:Posts tagged Tag}">{Tag}</a>
-                {/block:Tags}
-                {/block:HasTags}
-                {/block:IfShowTags}
                 {block:Title}
                 <h1><a href="{Permalink}">{Title}</a></h1>
                 {/block:Title}
+                {block:IfShowTags}
+                {block:HasTags}
+                <div class="tags">
+                    {block:Tags}
+                    #<a href="{TagURL}" title="{lang:Posts tagged Tag}">{Tag}</a>&nbsp;
+                    {/block:Tags}
+                </div>
+                {/block:HasTags}
+                {/block:IfShowTags}
+
+
                 {block:Date}
-                <small>
-                    {DayOfMonth} de {Month} de {Year}
-                </small>
-                <br>
+                <div class="data">
+                    <small>
+                        {DayOfMonth} de {Month} de {Year}
+                    </small>
+                    <br>
+                </div>
                 {/block:Date}
                 {Body}
 
@@ -99,16 +111,20 @@
                 {block:Photo}
                 {block:IfShowTags}
                 {block:HasTags}
-                {block:Tags}
-                <a href="{TagURL}" title="{lang:Posts tagged Tag}">{Tag}</a><br>
-                {/block:Tags}
+                <div class="tags">
+                    {block:Tags}
+                    #<a href="{TagURL}" title="{lang:Posts tagged Tag}">{Tag}</a>&nbsp;
+                    {/block:Tags}
+                </div>
                 {/block:HasTags}
                 {/block:IfShowTags}
                 {block:Date}
-                <small>
-                    {DayOfMonth} de {Month} de {Year}
-                </small>
-                <br>
+                <div class="data">
+                    <small>
+                        {DayOfMonth} de {Month} de {Year}
+                    </small>
+                    <br>
+                </div>
                 {/block:Date}
                 <div style="text-align:center;">
                     <a href="{Permalink}">
