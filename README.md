@@ -1,4 +1,7 @@
 # Tema básico para o Tumblr
+## Prévia
+![Prévia do tema](tema.png)
+
 ## Recursos
 - Textos
 - Disqus

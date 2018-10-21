@@ -37,6 +37,11 @@
     <meta name="if:Show Navigation" content="1">
     <style media="screen">
     /*Desktop*/
+    body{
+        color:#333;
+        font-family:sans;
+        font-size:1em;
+    }
     .avatar{
         border-radius: 100%;
     }
@@ -84,7 +89,8 @@
                 <a href="/" title="AI">
                     <img class="avatar" alt="Anderson Ismael" src="{PortraitURL-128}" width="128" height="128">
                 </a><br>
-                {Description}
+                <b>{Description}</b><br>
+                <small>{Title}</small>
             </td>
         </tr>
         <tr>
@@ -100,9 +106,8 @@
                 {block:HasTags}
                 <div class="tags">
                     <small>
-                        <a href="/">AI</a>
                         {block:Tags}
-                        / <a href="{TagURL}" title="{lang:Posts tagged Tag}">{Tag}</a>&nbsp;
+                        <a href="{TagURL}" title="{lang:Posts tagged Tag}">{Tag}</a>&nbsp;
                         {/block:Tags}
                     </small>
                 </div>
@@ -132,9 +137,8 @@
                 {block:HasTags}
                 <div class="tags">
                     <small>
-                        <a href="/">AI</a>
                         {block:Tags}
-                        / <a href="{TagURL}" title="{lang:Posts tagged Tag}">{Tag}</a>&nbsp;
+                        <a href="{TagURL}" title="{lang:Posts tagged Tag}">{Tag}</a>&nbsp;
                         {/block:Tags}
                     </small>
                 </div>
@@ -167,9 +171,8 @@
                 {block:HasTags}
                 <div class="tags">
                     <small>
-                        <a href="/">AI</a>
                         {block:Tags}
-                        / <a href="{TagURL}" title="{lang:Posts tagged Tag}">{Tag}</a>&nbsp;
+                        <a href="{TagURL}" title="{lang:Posts tagged Tag}">{Tag}</a>&nbsp;
                         {/block:Tags}
                     </small>
                 </div>
