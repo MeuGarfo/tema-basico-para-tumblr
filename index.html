@@ -65,8 +65,8 @@
     <table width="100%" border="0">
         <tr>
             <td colspan="3" align="center">
-                <a href="/">
-                    <img class="avatar" src="{PortraitURL-128}" width="128" height="128">
+                <a href="/" title="Início">
+                    <img class="avatar" alt="Anderson Ismael" src="{PortraitURL-128}" width="128" height="128">
                 </a><br>
                 {Description}
             </td>
@@ -83,8 +83,9 @@
                 {block:HasTags}
                 <div class="tags">
                     <small>
+                        <a href="/">Inicio</a>
                         {block:Tags}
-                        <a href="{TagURL}" title="{lang:Posts tagged Tag}">{Tag}</a>&nbsp;
+                        / <a href="{TagURL}" title="{lang:Posts tagged Tag}">{Tag}</a>&nbsp;
                         {/block:Tags}
                     </small>
                 </div>
@@ -114,8 +115,9 @@
                 {block:HasTags}
                 <div class="tags">
                     <small>
+                        <a href="/">Principal</a>
                         {block:Tags}
-                        <a href="{TagURL}" title="{lang:Posts tagged Tag}">{Tag}</a>&nbsp;
+                        / <a href="{TagURL}" title="{lang:Posts tagged Tag}">{Tag}</a>&nbsp;
                         {/block:Tags}
                     </small>
                 </div>
