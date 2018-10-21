@@ -40,10 +40,14 @@
     .avatar{
         border-radius: 100%;
     }
-    .data{
+    .conteudo iframe{
+        display: block;
+        max-width: 100%;
+    }
+    .conteudo .data{
         color:gray;
     }
-    .tags a{
+    .conteudo .tags a{
         text-transform: capitalize;
     }
     /*Mobile*/
@@ -74,7 +78,7 @@
         <tr>
             <td width="25%">
             </td>
-            <td>
+            <td class="conteudo">
                 {block:Posts}
 
                 {block:Text}
@@ -144,6 +148,25 @@
                     {/block:Caption}
                 </div>
                 {/block:Photo}
+
+                {block:Video}
+                {block:IfShowTags}
+                {block:HasTags}
+                <div class="tags">
+                    <small>
+                        <a href="/">Home</a>
+                        {block:Tags}
+                        / <a href="{TagURL}" title="{lang:Posts tagged Tag}">{Tag}</a>&nbsp;
+                        {/block:Tags}
+                    </small>
+                </div>
+                {/block:HasTags}
+                {/block:IfShowTags}
+                {Video-500}
+                {block:Caption}<br>
+                {Caption}
+                {/block:Caption}
+                {/block:Video}
 
                 {block:HomePage}
                 <hr>
