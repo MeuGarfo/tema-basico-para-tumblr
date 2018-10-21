@@ -73,32 +73,28 @@
         </tr>
         <tr>
             <td width="25%">
-
             </td>
             <td>
-                <hr>
-
-
                 {block:Posts}
+
                 {block:Text}
-                
+
                 {block:IfShowTags}
                 {block:HasTags}
                 <div class="tags">
-                    {block:Tags}
-                    #<a href="{TagURL}" title="{lang:Posts tagged Tag}">{Tag}</a>&nbsp;
-                    {/block:Tags}
+                    <small>
+                        {block:Tags}
+                        <a href="{TagURL}" title="{lang:Posts tagged Tag}">{Tag}</a>&nbsp;
+                        {/block:Tags}
+                    </small>
                 </div>
                 {/block:HasTags}
                 {/block:IfShowTags}
-
 
                 {block:Title}
                 <h1><a href="{Permalink}">{Title}</a></h1>
                 {/block:Title}
 
-
-
                 {block:Date}
                 <div class="data">
                     <small>
@@ -107,21 +103,25 @@
                     <br>
                 </div>
                 {/block:Date}
-                {Body}
 
+                {Body}
 
                 {/block:Text}
 
                 {block:Photo}
+
                 {block:IfShowTags}
                 {block:HasTags}
                 <div class="tags">
-                    {block:Tags}
-                    #<a href="{TagURL}" title="{lang:Posts tagged Tag}">{Tag}</a>&nbsp;
-                    {/block:Tags}
+                    <small>
+                        {block:Tags}
+                        <a href="{TagURL}" title="{lang:Posts tagged Tag}">{Tag}</a>&nbsp;
+                        {/block:Tags}
+                    </small>
                 </div>
                 {/block:HasTags}
                 {/block:IfShowTags}
+
                 {block:Date}
                 <div class="data">
                     <small>
@@ -130,6 +130,7 @@
                     <br>
                 </div>
                 {/block:Date}
+
                 <div style="text-align:center;">
                     <a href="{Permalink}">
                         <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
@@ -140,15 +141,13 @@
                     </p>
                     {/block:Caption}
                 </div>
-
-                {/block:Text}
-
                 {/block:Photo}
+
                 {block:HomePage}
                 <hr>
                 {/block:HomePage}
-                {/block:Posts}
 
+                {/block:Posts}
 
                 {block:IndexPage}
                 <table width="100%" border="0">
@@ -166,7 +165,6 @@
                     </tr>
                 </table>
                 {/block:IndexPage}
-
 
                 {block:PermalinkPage}
                 {block:PermalinkPagination}
@@ -215,14 +213,10 @@
             </script>
             {/block:IfDisqusShortname}
 
-
         </td>
         <td width="25%">
-
         </td>
     </tr>
 </table>
-
-
 </body>
 </html>
